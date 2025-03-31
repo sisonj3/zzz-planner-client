@@ -7,7 +7,7 @@ import Add from '../components/Add';
 import CharacterDisplay from '../components/characterDisplay';
 import placeBetween from "../scripts/splitArray";
 
-const agentsPath = 'https://zzz-planner.onrender.com/assets/Agents';
+const agentsPath = '../assets/Agents';
 
 export default function Characters({ token, account, callback }) {
 
