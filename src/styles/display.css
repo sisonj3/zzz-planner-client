@@ -1,0 +1,140 @@
+.buttons {
+    display: flex;
+
+    justify-content: end;
+
+    gap: 5px;
+}
+
+.buttons button {
+    background-color: white;
+    
+    border: 1px black solid;
+    border-radius: 100%;
+
+    padding: 0.25em;
+
+    width: fit-content;
+    height: fit-content;
+}
+
+.buttons input {
+    width: fit-content;
+}
+
+.settings {
+    margin-right: auto;
+}
+
+.settings img {
+    display: block;
+
+    width: 1em;
+}
+
+.sliders {
+    background-color: var(--belle-green);
+    
+    border: 5px var(--belle-black) solid;
+
+    width: 75%;
+    max-width: 250px;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 5px 10px;
+
+    z-index: 3;
+
+    white-space: nowrap;
+}
+
+.slider {
+    display: flex;
+
+    gap: 5px;
+    padding-bottom: 5px;
+}
+
+.loadouts {
+    background-color: var(--belle-green);
+    
+    border: 5px var(--belle-black) solid;
+
+    width: fit-content;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 5px 10px;
+
+    z-index: 3;
+
+}
+
+.sets {
+    width: 50vw;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+
+    padding: 5px;
+    gap: 5px;
+}
+
+.unit {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+
+    margin-top: 5px;
+}
+
+.icon {
+    width: 15%;
+    max-width: 150px;
+
+    display: flex;
+}
+
+.materials {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+    justify-items: center;
+
+    gap: 5px;
+
+}
+
+.material {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    width: 75px;
+}
+
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.greenyellow {
+    background-color: greenyellow;
+}
+
+.green {
+    background-color: green;
+}

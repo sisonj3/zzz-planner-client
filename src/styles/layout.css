@@ -1,0 +1,96 @@
+:root {
+    --belle-blue: #585980;
+    --belle-orange: #bc5420;
+    --belle-black: #0b0c12;
+    --belle-green: #537870;
+    --belle-brown: #341d15;
+    --belle-pale: #e7cebe;
+    --ellen-red: #de321e;
+
+    background-color: var(--belle-pale);
+    color: var(--belle-black);
+}
+
+a {
+    color: var(--belle-orange);
+}
+
+.layout {
+    grid-template:
+            "nav nav nav" 1fr
+            "main main main" 1fr
+            "main main main" 1fr / 1fr 1fr 1fr;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    overflow: visible;
+
+    width: 100%;
+    height: fit-content;
+}
+
+h1 {
+    margin: 5px 0px;
+
+    font-size: 1.5em;
+}
+
+nav {
+    grid-area: nav;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    position: sticky;
+    top: 0;
+
+    padding: 10px;
+
+    z-index: 1;
+
+    background-color: var(--belle-blue);
+
+}
+
+.logOut {
+    padding: 5px;
+}
+
+.logOutBox {
+    background-color: var(--belle-green);
+    
+    border: 5px var(--belle-black) solid;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 5px;
+    padding: 10px;
+
+    z-index: 3;
+}
+
+.logOutBox div {
+    display: flex;
+
+    gap: 5px;
+}
+
+main {
+    grid-area: main;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 110px);
+
+    height: max-content;
+}
+
+main.list {
+    display: flex;
+    flex-direction: column;
+}

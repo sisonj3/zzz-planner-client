@@ -1,0 +1,37 @@
+.center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logForm {
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+}
+
+.logForm ul {
+    padding: 0;
+}
+
+.logForm li {
+    list-style-type: none;
+}
+
+.logForm button {
+    width: fit-content;
+    align-self: center;
+}
+
+.error {
+    color: var(--ellen-red);
+}
+
+.noMargin {
+    margin: 0;
+}
