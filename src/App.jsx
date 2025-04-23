@@ -17,6 +17,8 @@ function App() {
 
   let storageAvailable = checkStorage("localStorage");
 
+  localStorage.clear();
+
   // Clear local storage if stored token is expired
   if (storageAvailable && localStorage.getItem("token") != null) {
     const decodedToken = jwtDecode(localStorage.getItem("token"));
