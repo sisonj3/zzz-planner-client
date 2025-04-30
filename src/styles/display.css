@@ -60,6 +60,9 @@
 }
 
 select {
+    background-color: var(--belle-blue);
+    color: var(--belle-black);
+
     padding: 5px;
 
     border-radius: 10px;
