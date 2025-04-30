@@ -59,6 +59,10 @@
     padding-bottom: 5px;
 }
 
+select {
+    padding: 5px;
+}
+
 .loadouts {
     background-color: var(--belle-green);
     
