@@ -282,18 +282,18 @@ export default function CharacterDisplay({ token, imgUrl, agent, index, updateCa
                     <button onClick={closeSliders} className='close addBtn'><img className='plus rotate' src={plus} /></button>
 
                     <div className="slider">
-                        <label htmlFor="asc-c">Current Ascension:</label>
+                        <label htmlFor="asc-c">Ascension:</label>
                         <select name="asc-c" id="asc-c" onChange={changeAscC}>
                             {numArr(0, 5).map((num, index) => (
                                 (num == ascC) ? <option key={index} value={num} selected>{ num }</option> : <option key={index} value={num}>{ num }</option>
                             ))}
                         </select>
-                    </div>
 
-                    <div className="slider">
-                        <label htmlFor="asc-g">Final Ascension:</label>
-                        <input type="range" name="asc-g" id="asc-g" min={0} max={5} value={ascG} onInput={changeAscG} />
-                        <span>{ascG}</span>
+                        <select name="asc-g" id="asc-g" onChange={changeAscG}>
+                            {numArr(0, 5).map((num, index) => (
+                                (num == ascG) ? <option key={index} value={num} selected>{ num }</option> : <option key={index} value={num}>{ num }</option>
+                            ))}
+                        </select>
                     </div>
 
                     <div className="slider">
