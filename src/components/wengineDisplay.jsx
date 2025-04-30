@@ -136,28 +136,38 @@ export default function WengineDisplay({ token, imgUrl, wengine, index, updateCa
                     <button onClick={closeSliders} className='close addBtn'><img className='plus rotate' src={plus} /></button>
 
                     <div className="slider">
-                        <label htmlFor="asc-c">Current Ascension:</label>
-                        <input type="range" name="asc-c" id="asc-c" min={0} max={5} value={ascC} onInput={changeAscC} />
-                        <span>{ascC}</span>
+                        <label htmlFor="asc-c">Ascension:</label>
+
+                        <select name="asc-c" id="asc-c" onChange={changeAscC}>
+                            {numArr(0, 5).map((num, index) => (
+                                (num == ascC) ? <option key={index} value={num} selected>{ num }</option> : <option key={index} value={num}>{ num }</option>
+                            ))}
+                        </select>
+
+                        <select name="asc-g" id="asc-g" onChange={changeAscG}>
+                            {numArr(0, 5).map((num, index) => (
+                                (num == ascG) ? <option key={index} value={num} selected>{ num }</option> : <option key={index} value={num}>{ num }</option>
+                            ))}
+                        </select>
+
                     </div>
 
                     <div className="slider">
-                        <label htmlFor="asc-g">Final Ascension:</label>
-                        <input type="range" name="asc-g" id="asc-g" min={0} max={5} value={ascG} onInput={changeAscG}/>
-                        <span>{ascG}</span>
+                        <label htmlFor="lvl-c">Level:</label>
+
+                        <select name="lvl-c" id="lvl-c" onChange={changeLvlC}>
+                            {numArr(1, 60).map((num, index) => (
+                                (num == lvlC) ? <option key={index} value={num} selected>{ num }</option> : <option key={index} value={num}>{ num }</option>
+                            ))}
+                        </select>
+
+                        <select name="lvl-g" id="lvl-g" onChange={changeLvlG}>
+                            {numArr(1, 60).map((num, index) => (
+                                (num == lvlG) ? <option key={index} value={num} selected>{ num }</option> : <option key={index} value={num}>{ num }</option>
+                            ))}
+                        </select>
                     </div>
 
-                    <div className="slider">
-                        <label htmlFor="lvl-c">Current Level:</label>
-                        <input type="range" name="lvl-c" id="lvl-c" min={0} max={60} value={lvlC} onInput={changeLvlC}/>
-                        <span>{lvlC}</span>
-                    </div>
-                    
-                    <div className="slider">
-                        <label htmlFor="lvl-g">Final Level:</label>
-                        <input type="range" name="lvl-g" id="lvl-g" min={0} max={60} value={lvlG} onInput={changeLvlG}/>
-                        <span>{lvlG}</span>
-                    </div>
                 </div>
 
             </div>
