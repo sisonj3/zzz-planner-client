@@ -53,6 +53,7 @@ button.close img {
 }
 
 button.submit {
+    background-color: var(--belle-blue);
     padding: 5px;
 }
 
