@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import getWengineMats from '../scripts/getWengineMats';
+import numArr from '../scripts/numArr';
 import plus from '../assets/plus.svg';
 import gear from '../assets/gear.svg';
 
