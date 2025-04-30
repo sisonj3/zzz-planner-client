@@ -333,64 +333,90 @@ export default function CharacterDisplay({ token, imgUrl, agent, index, updateCa
                     </div>
 
                     <div className="slider">
-                        <label htmlFor="s1-c">Current S1:</label>
-                        <input type="range" name="s1-c" id="s1-c" min={1} max={12} value={s1C} onInput={changeS1C} />
-                        <span>{s1C}</span>
+                        <label htmlFor="s1-c">S1:</label>
+
+                        <select name="s1-c" id="s1-c" onChange={changeS1C}>
+                            {numArr(1, 12).map((num, index) => (
+                                (num == s1C) ? <option key={index} value={num} selected>{ num }</option> : <option key={index} value={num}>{ num }</option>
+                            ))}
+                        </select>
+                    
+                        <select name="s1-g" id="s1-g" onChange={changeS1G}>
+                            {numArr(1, 12).map((num, index) => (
+                                (num == s1G) ? <option key={index} value={num} selected>{ num }</option> : <option key={index} value={num}>{ num }</option>
+                            ))}
+                        </select>
+
                     </div>
 
                     <div className="slider">
-                        <label htmlFor="s1-g">Final S1:</label>
-                        <input type="range" name="s1-g" id="s1-g" min={1} max={12} value={s1G} onInput={changeS1G} />
-                        <span>{s1G}</span>
+                        <label htmlFor="s2-c">S2:</label>
+
+                        <select name="s2-c" id="s2-c" onChange={changeS2C}>
+                            {numArr(1, 12).map((num, index) => (
+                                (num == s2C) ? <option key={index} value={num} selected>{ num }</option> : <option key={index} value={num}>{ num }</option>
+                            ))}
+                        </select>
+                    
+                        <select name="s2-g" id="s2-g" onChange={changeS2G}>
+                            {numArr(1, 12).map((num, index) => (
+                                (num == s2G) ? <option key={index} value={num} selected>{ num }</option> : <option key={index} value={num}>{ num }</option>
+                            ))}
+                        </select>
+                
                     </div>
 
                     <div className="slider">
-                        <label htmlFor="s2-c">Current S2:</label>
-                        <input type="range" name="s2-c" id="s2-c" min={1} max={12} value={s2C} onInput={changeS2C} />
-                        <span>{s2C}</span>
+                        <label htmlFor="s3-c">S3:</label>
+                        
+                        <select name="s3-c" id="s3-c" onChange={changeS3C}>
+                            {numArr(1, 12).map((num, index) => (
+                                (num == s3C) ? <option key={index} value={num} selected>{ num }</option> : <option key={index} value={num}>{ num }</option>
+                            ))}
+                        </select>
+                    
+                        <select name="s3-g" id="s3-g" onChange={changeS3G}>
+                            {numArr(1, 12).map((num, index) => (
+                                (num == s3G) ? <option key={index} value={num} selected>{ num }</option> : <option key={index} value={num}>{ num }</option>
+                            ))}
+                        </select>
+                
                     </div>
 
                     <div className="slider">
-                        <label htmlFor="s2-g">Final S2:</label>
-                        <input type="range" name="s2-g" id="s2-g" min={1} max={12} value={s2G} onInput={changeS2G} />
-                        <span>{s2G}</span>
+                        <label htmlFor="s4-c">S4:</label>
+                        
+                        <select name="s4-c" id="s4-c" onChange={changeS4C}>
+                            {numArr(1, 12).map((num, index) => (
+                                (num == s4C) ? <option key={index} value={num} selected>{ num }</option> : <option key={index} value={num}>{ num }</option>
+                            ))}
+                        </select>
+                    
+                        <select name="s4-g" id="s4-g" onChange={changeS4G}>
+                            {numArr(1, 12).map((num, index) => (
+                                (num == s4G) ? <option key={index} value={num} selected>{ num }</option> : <option key={index} value={num}>{ num }</option>
+                            ))}
+                        </select>
+                
                     </div>
 
                     <div className="slider">
-                        <label htmlFor="s3-c">Current S3:</label>
-                        <input type="range" name="s3-c" id="s3-c" min={1} max={12} value={s3C} onInput={changeS3C} />
-                        <span>{s3C}</span>
+                        <label htmlFor="s5-c">S5:</label>
+
+                        <select name="s5-c" id="s5-c" onChange={changeS5C}>
+                            {numArr(1, 12).map((num, index) => (
+                                (num == s5C) ? <option key={index} value={num} selected>{ num }</option> : <option key={index} value={num}>{ num }</option>
+                            ))}
+                        </select>
+                    
+                        <select name="s5-g" id="s5-g" onChange={changeS5G}>
+                            {numArr(1, 12).map((num, index) => (
+                                (num == s5G) ? <option key={index} value={num} selected>{ num }</option> : <option key={index} value={num}>{ num }</option>
+                            ))}
+                        </select>
+                
                     </div>
 
-                    <div className="slider">
-                        <label htmlFor="s3-g">Final S3:</label>
-                        <input type="range" name="s3-g" id="s3-g" min={1} max={12} value={s3G} onInput={changeS3G} />
-                        <span>{s3G}</span>
-                    </div>
-
-                    <div className="slider">
-                        <label htmlFor="s4-c">Current S4:</label>
-                        <input type="range" name="s4-c" id="s4-c" min={1} max={12} value={s4C} onInput={changeS4C} />
-                        <span>{s4C}</span>
-                    </div>
-
-                    <div className="slider">
-                        <label htmlFor="s4-g">Final S4:</label>
-                        <input type="range" name="s4-g" id="s4-g" min={1} max={12} value={s4G} onInput={changeS4G} />
-                        <span>{s4G}</span>
-                    </div>
-
-                    <div className="slider">
-                        <label htmlFor="s5-c">Current S5:</label>
-                        <input type="range" name="s5-c" id="s5-c" min={1} max={12} value={s5C} onInput={changeS5C} />
-                        <span>{s5C}</span>
-                    </div>
-
-                    <div className="slider">
-                        <label htmlFor="s5-g">Final S5:</label>
-                        <input type="range" name="s5-g" id="s5-g" min={1} max={12} value={s5G} onInput={changeS5G} />
-                        <span>{s5G}</span>
-                    </div>
                 </div>
 
             </div>
