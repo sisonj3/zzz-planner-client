@@ -317,14 +317,19 @@ export default function CharacterDisplay({ token, imgUrl, agent, index, updateCa
 
                     <div className="slider">
                         <label htmlFor="core-c">Current Core:</label>
-                        <input type="range" name="core-c" id="core-c" min={0} max={6} value={coreC} onInput={changeCoreC} />
-                        <span>{coreLetter(coreC)}</span>
-                    </div>
 
-                    <div className="slider">
-                        <label htmlFor="asc-g">Final Core:</label>
-                        <input type="range" name="core-g" id="core-g" min={0} max={6} value={coreG} onInput={changeCoreG} />
-                        <span>{coreLetter(coreG)}</span>
+                        <select name="core-c" id="core-c" onChange={changeCoreC}>
+                            {numArr(0, 6).map((num, index) => (
+                                (num == coreC) ? <option key={index} value={num} selected>{ coreLetter(num) }</option> : <option key={index} value={num}>{ coreLetter(num) }</option>
+                            ))}
+                        </select>
+
+                        <select name="core-g" id="core-g" onChange={changeCoreG}>
+                            {numArr(0, 6).map((num, index) => (
+                                (num == coreG) ? <option key={index} value={num} selected>{ coreLetter(num) }</option> : <option key={index} value={num}>{ coreLetter(num) }</option>
+                            ))}
+                        </select>
+
                     </div>
 
                     <div className="slider">
