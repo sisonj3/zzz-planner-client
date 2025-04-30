@@ -283,6 +283,7 @@ export default function CharacterDisplay({ token, imgUrl, agent, index, updateCa
 
                     <div className="slider">
                         <label htmlFor="asc-c">Ascension:</label>
+
                         <select name="asc-c" id="asc-c" onChange={changeAscC}>
                             {numArr(0, 5).map((num, index) => (
                                 (num == ascC) ? <option key={index} value={num} selected>{ num }</option> : <option key={index} value={num}>{ num }</option>
@@ -294,18 +295,24 @@ export default function CharacterDisplay({ token, imgUrl, agent, index, updateCa
                                 (num == ascG) ? <option key={index} value={num} selected>{ num }</option> : <option key={index} value={num}>{ num }</option>
                             ))}
                         </select>
+
                     </div>
 
                     <div className="slider">
-                        <label htmlFor="lvl-c">Current Level:</label>
-                        <input type="range" name="lvl-c" id="lvl-c" min={1} max={60} value={lvlC} onInput={changeLvlC}/>
-                        <span>{lvlC}</span>
-                    </div>
-                    
-                    <div className="slider">
-                        <label htmlFor="lvl-g">Final Level:</label>
-                        <input type="range" name="lvl-g" id="lvl-g" min={1} max={60} value={lvlG} onInput={changeLvlG}/>
-                        <span>{lvlG}</span>
+                        <label htmlFor="lvl-c">Level:</label>
+
+                        <select name="lvl-c" id="lvl-c" onChange={changeLvlC}>
+                            {numArr(1, 60).map((num, index) => (
+                                (num == lvlC) ? <option key={index} value={num} selected>{ num }</option> : <option key={index} value={num}>{ num }</option>
+                            ))}
+                        </select>
+
+                        <select name="lvl-g" id="lvl-g" onChange={changeLvlG}>
+                            {numArr(1, 60).map((num, index) => (
+                                (num == lvlG) ? <option key={index} value={num} selected>{ num }</option> : <option key={index} value={num}>{ num }</option>
+                            ))}
+                        </select>
+
                     </div>
 
                     <div className="slider">
