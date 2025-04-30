@@ -283,7 +283,7 @@ export default function CharacterDisplay({ token, imgUrl, agent, index, updateCa
 
                     <div className="slider">
                         <label htmlFor="asc-c">Current Ascension:</label>
-                        <select name="asc-c" id="asc-c" onChange={(e) => console.log(e.target.value)}>
+                        <select name="asc-c" id="asc-c" onChange={changeAscC}>
                             {numArr(0, 5).map((num, index) => (
                                 (num == ascC) ? <option key={index} value={num} selected>{ num }</option> : <option key={index} value={num}>{ num }</option>
                             ))}
