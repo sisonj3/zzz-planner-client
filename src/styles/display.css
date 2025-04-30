@@ -61,6 +61,15 @@
 
 select {
     padding: 5px;
+
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+option {
+    background-color: var(--belle-blue);
+    color: var(--belle-black);
 }
 
 .loadouts {
