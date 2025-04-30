@@ -316,7 +316,7 @@ export default function CharacterDisplay({ token, imgUrl, agent, index, updateCa
                     </div>
 
                     <div className="slider">
-                        <label htmlFor="core-c">Current Core:</label>
+                        <label htmlFor="core-c">Core:</label>
 
                         <select name="core-c" id="core-c" onChange={changeCoreC}>
                             {numArr(0, 6).map((num, index) => (

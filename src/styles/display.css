@@ -7,7 +7,7 @@
 }
 
 .buttons button {
-    background-color: white;
+    background-color: var(--belle-orange);
     
     border: 1px black solid;
     border-radius: 100%;
