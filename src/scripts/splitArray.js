@@ -6,8 +6,6 @@ export default function placeBetween(arr, index1, index2) {
     let temp = [...arr];
     let newArr = [];
 
-    console.log(index1 + " " + index2);
-
     let draggedChar = temp[index1];
 
     for (let i = 0; i < temp.length; i++) {
