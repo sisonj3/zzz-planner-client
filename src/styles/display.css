@@ -105,6 +105,10 @@ option {
     gap: 5px;
 }
 
+.substats {
+    display: flex;
+}
+
 .unit {
     display: flex;
     flex-direction: column;
