@@ -107,6 +107,8 @@ option {
 
 .substats {
     display: flex;
+
+    gap: 5px;
 }
 
 .unit {
