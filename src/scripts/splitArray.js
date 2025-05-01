@@ -11,7 +11,7 @@ export default function placeBetween(arr, index1, index2) {
     let draggedChar = temp[index1];
 
     for (let i = 0; i < temp.length; i++) {
-        if (temp[i].name != draggedChar.name) {
+        if (temp[i].name != draggedChar.name && i != index2) {
             newArr.push(temp[i]);
         }
 
