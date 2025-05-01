@@ -230,7 +230,7 @@ export default function LoadoutDisplay({ imgUrl, loadout, index, updateCallback,
 
                 <div className="substats" draggable onDragStart={preventDrag}>
                     <div>
-                        <label htmlFor="Slot_1">D1</label>
+                        <label htmlFor="Slot_1">D1: </label>
 
                         <select name="Slot_1" id="Slot_1" onChange={changeD1}>
                             {numArr(0, 9).map((num, index) => (
@@ -240,7 +240,7 @@ export default function LoadoutDisplay({ imgUrl, loadout, index, updateCallback,
                     </div>
 
                     <div>
-                        <label htmlFor="Slot_2">D2</label>
+                        <label htmlFor="Slot_2">D2: </label>
 
                         <select name="Slot_2" id="Slot_2" onChange={changeD2}>
                             {numArr(0, 9).map((num, index) => (
@@ -250,7 +250,7 @@ export default function LoadoutDisplay({ imgUrl, loadout, index, updateCallback,
                     </div>
 
                     <div>
-                        <label htmlFor="Slot_3">D3</label>
+                        <label htmlFor="Slot_3">D3: </label>
 
                         <select name="Slot_3" id="Slot_3" onChange={changeD3}>
                             {numArr(0, 9).map((num, index) => (
@@ -260,7 +260,7 @@ export default function LoadoutDisplay({ imgUrl, loadout, index, updateCallback,
                     </div>
 
                     <div>
-                        <label htmlFor="Slot_4">D4</label>
+                        <label htmlFor="Slot_4">D4: </label>
 
                         <select name="Slot_4" id="Slot_4" onChange={changeD4}>
                             {numArr(0, 9).map((num, index) => (
@@ -270,7 +270,7 @@ export default function LoadoutDisplay({ imgUrl, loadout, index, updateCallback,
                     </div>
 
                     <div>
-                        <label htmlFor="Slot_5">D5</label>
+                        <label htmlFor="Slot_5">D5: </label>
 
                         <select name="Slot_5" id="Slot_5" onChange={changeD5}>
                             {numArr(0, 9).map((num, index) => (
@@ -280,7 +280,7 @@ export default function LoadoutDisplay({ imgUrl, loadout, index, updateCallback,
                     </div>
 
                     <div>
-                        <label htmlFor="Slot_6">D6</label>
+                        <label htmlFor="Slot_6">D6: </label>
 
                         <select name="Slot_6" id="Slot_6" onChange={changeD6}>
                             {numArr(0, 9).map((num, index) => (
