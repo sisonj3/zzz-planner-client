@@ -17,10 +17,10 @@ export default function placeBetween(arr, index1, index2) {
             if (index1 > index2) {
                 newArr.push(draggedChar);
                 newArr.push(temp[i]);
-            }
-
-            if (index2 > index1) {
+            } else if (index2 > index1) {
                 newArr.push(temp[i]);
+                newArr.push(draggedChar);
+            } else {
                 newArr.push(draggedChar);
             }
             
