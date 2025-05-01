@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import numArr from '../scripts/numArr';
 import plus from '../assets/plus.svg';
 import gear from '../assets/gear.svg';
 import getImg from "../scripts/getImg";
@@ -230,34 +231,64 @@ export default function LoadoutDisplay({ imgUrl, loadout, index, updateCallback,
                 <div className="substats" draggable onDragStart={preventDrag}>
                     <div>
                         <label htmlFor="Slot_1">D1</label>
-                        <input type="number" name="Slot_1" id="Slot_1" min={0} max={9} value={d1} onInput={changeD1} />
+
+                        <select name="Slot_1" id="Slot_1" onChange={changeD1}>
+                            {numArr(0, 9).map((num, index) => (
+                                (num == d1) ? <option key={index} value={num} selected>{ num }</option> : <option key={index} value={num}>{ num }</option>
+                            ))}
+                        </select>
                     </div>
 
                     <div>
                         <label htmlFor="Slot_2">D2</label>
-                        <input type="number" name="Slot_2" id="Slot_2" min={0} max={9} value={d2} onInput={changeD2} />
+
+                        <select name="Slot_2" id="Slot_2" onChange={changeD2}>
+                            {numArr(0, 9).map((num, index) => (
+                                (num == d2) ? <option key={index} value={num} selected>{ num }</option> : <option key={index} value={num}>{ num }</option>
+                            ))}
+                        </select>
                     </div>
 
                     <div>
                         <label htmlFor="Slot_3">D3</label>
-                        <input type="number" name="Slot_3" id="Slot_3" min={0} max={9} value={d3} onInput={changeD3} />
+
+                        <select name="Slot_3" id="Slot_3" onChange={changeD3}>
+                            {numArr(0, 9).map((num, index) => (
+                                (num == d3) ? <option key={index} value={num} selected>{ num }</option> : <option key={index} value={num}>{ num }</option>
+                            ))}
+                        </select>
                     </div>
 
                     <div>
                         <label htmlFor="Slot_4">D4</label>
-                        <input type="number" name="Slot_4" id="Slot_4" min={0} max={9} value={d4} onInput={changeD4} />
+
+                        <select name="Slot_4" id="Slot_4" onChange={changeD4}>
+                            {numArr(0, 9).map((num, index) => (
+                                (num == d4) ? <option key={index} value={num} selected>{ num }</option> : <option key={index} value={num}>{ num }</option>
+                            ))}
+                        </select>
                     </div>
 
                     <div>
                         <label htmlFor="Slot_5">D5</label>
-                        <input type="number" name="Slot_5" id="Slot_5" min={0} max={9} value={d5} onInput={changeD5} />
+
+                        <select name="Slot_5" id="Slot_5" onChange={changeD5}>
+                            {numArr(0, 9).map((num, index) => (
+                                (num == d5) ? <option key={index} value={num} selected>{ num }</option> : <option key={index} value={num}>{ num }</option>
+                            ))}
+                        </select>
                     </div>
 
                     <div>
                         <label htmlFor="Slot_6">D6</label>
-                        <input type="number" name="Slot_6" id="Slot_6" min={0} max={9} value={d6} onInput={changeD6} />
-                    </div>
 
+                        <select name="Slot_6" id="Slot_6" onChange={changeD6}>
+                            {numArr(0, 9).map((num, index) => (
+                                (num == d6) ? <option key={index} value={num} selected>{ num }</option> : <option key={index} value={num}>{ num }</option>
+                            ))}
+                        </select>
+                    </div>
+                    
                     <span className={highlight}>{((d1+d2+d3+d4+d5+d6) / 45).toFixed(2)}</span>
                 </div>
 
