@@ -289,7 +289,8 @@ export default function LoadoutDisplay({ imgUrl, loadout, index, updateCallback,
                         </select>
                     </div>
                     
-                    <span className={highlight}>Effective Substats: {((d1+d2+d3+d4+d5+d6) / 45).toFixed(2) * 100}%</span>
+                    <div>Effective Substats: <span className={highlight}>{((d1+d2+d3+d4+d5+d6) / 45).toFixed(2) * 100}%</span></div>
+                    
                 </div>
 
                 <div className="loadouts hidden" ref={sliders} draggable onDragStart={preventDrag}>
