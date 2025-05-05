@@ -290,6 +290,8 @@ export default function CharacterDisplay({ token, imgUrl, agent, index, updateCa
                             ))}
                         </select>
 
+                        <img src={chevrons} alt=">>" title="Upgrade to" />
+
                         <select name="asc-g" id="asc-g" onChange={changeAscG}>
                             {numArr(0, 5).map((num, index) => (
                                 (num == ascG) ? <option key={index} value={num} selected>{ num }</option> : <option key={index} value={num}>{ num }</option>
@@ -306,6 +308,8 @@ export default function CharacterDisplay({ token, imgUrl, agent, index, updateCa
                                 (num == lvlC) ? <option key={index} value={num} selected>{ num }</option> : <option key={index} value={num}>{ num }</option>
                             ))}
                         </select>
+
+                        <img src={chevrons} alt=">>" title="Upgrade to" />
 
                         <select name="lvl-g" id="lvl-g" onChange={changeLvlG}>
                             {numArr(1, 60).map((num, index) => (
@@ -324,6 +328,8 @@ export default function CharacterDisplay({ token, imgUrl, agent, index, updateCa
                             ))}
                         </select>
 
+                        <img src={chevrons} alt=">>" title="Upgrade to" />
+
                         <select name="core-g" id="core-g" onChange={changeCoreG}>
                             {numArr(0, 6).map((num, index) => (
                                 (num == coreG) ? <option key={index} value={num} selected>{ coreLetter(num) }</option> : <option key={index} value={num}>{ coreLetter(num) }</option>
@@ -340,6 +346,8 @@ export default function CharacterDisplay({ token, imgUrl, agent, index, updateCa
                                 (num == s1C) ? <option key={index} value={num} selected>{ num }</option> : <option key={index} value={num}>{ num }</option>
                             ))}
                         </select>
+
+                        <img src={chevrons} alt=">>" title="Upgrade to" />
                     
                         <select name="s1-g" id="s1-g" onChange={changeS1G}>
                             {numArr(1, 12).map((num, index) => (
@@ -357,6 +365,8 @@ export default function CharacterDisplay({ token, imgUrl, agent, index, updateCa
                                 (num == s2C) ? <option key={index} value={num} selected>{ num }</option> : <option key={index} value={num}>{ num }</option>
                             ))}
                         </select>
+
+                        <img src={chevrons} alt=">>" title="Upgrade to" />
                     
                         <select name="s2-g" id="s2-g" onChange={changeS2G}>
                             {numArr(1, 12).map((num, index) => (
@@ -374,6 +384,8 @@ export default function CharacterDisplay({ token, imgUrl, agent, index, updateCa
                                 (num == s3C) ? <option key={index} value={num} selected>{ num }</option> : <option key={index} value={num}>{ num }</option>
                             ))}
                         </select>
+
+                        <img src={chevrons} alt=">>" title="Upgrade to" />
                     
                         <select name="s3-g" id="s3-g" onChange={changeS3G}>
                             {numArr(1, 12).map((num, index) => (
@@ -391,6 +403,8 @@ export default function CharacterDisplay({ token, imgUrl, agent, index, updateCa
                                 (num == s4C) ? <option key={index} value={num} selected>{ num }</option> : <option key={index} value={num}>{ num }</option>
                             ))}
                         </select>
+
+                        <img src={chevrons} alt=">>" title="Upgrade to" />
                     
                         <select name="s4-g" id="s4-g" onChange={changeS4G}>
                             {numArr(1, 12).map((num, index) => (
@@ -408,6 +422,8 @@ export default function CharacterDisplay({ token, imgUrl, agent, index, updateCa
                                 (num == s5C) ? <option key={index} value={num} selected>{ num }</option> : <option key={index} value={num}>{ num }</option>
                             ))}
                         </select>
+
+                        <img src={chevrons} alt=">>" title="Upgrade to" />
                     
                         <select name="s5-g" id="s5-g" onChange={changeS5G}>
                             {numArr(1, 12).map((num, index) => (

@@ -3,6 +3,7 @@ import getWengineMats from '../scripts/getWengineMats';
 import numArr from '../scripts/numArr';
 import plus from '../assets/plus.svg';
 import gear from '../assets/gear.svg';
+import chevrons from '../assets/chevrons.svg'
 
 export default function WengineDisplay({ token, imgUrl, wengine, index, updateCallback, deleteCallback, inventory }) {
 
@@ -145,6 +146,8 @@ export default function WengineDisplay({ token, imgUrl, wengine, index, updateCa
                             ))}
                         </select>
 
+                        <img src={chevrons} alt=">>" title="Upgrade to" />
+
                         <select name="asc-g" id="asc-g" onChange={changeAscG}>
                             {numArr(0, 5).map((num, index) => (
                                 (num == ascG) ? <option key={index} value={num} selected>{ num }</option> : <option key={index} value={num}>{ num }</option>
@@ -161,6 +164,8 @@ export default function WengineDisplay({ token, imgUrl, wengine, index, updateCa
                                 (num == lvlC) ? <option key={index} value={num} selected>{ num }</option> : <option key={index} value={num}>{ num }</option>
                             ))}
                         </select>
+
+                        <img src={chevrons} alt=">>" title="Upgrade to" />
 
                         <select name="lvl-g" id="lvl-g" onChange={changeLvlG}>
                             {numArr(1, 60).map((num, index) => (
