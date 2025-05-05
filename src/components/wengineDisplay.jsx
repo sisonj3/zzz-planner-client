@@ -3,7 +3,7 @@ import getWengineMats from '../scripts/getWengineMats';
 import numArr from '../scripts/numArr';
 import plus from '../assets/plus.svg';
 import gear from '../assets/gear.svg';
-import chevrons from '../assets/chevrons.svg'
+import chevrons from '../assets/chevrons.svg';
 
 export default function WengineDisplay({ token, imgUrl, wengine, index, updateCallback, deleteCallback, inventory }) {
 

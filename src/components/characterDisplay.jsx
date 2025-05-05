@@ -3,6 +3,7 @@ import getAgentMats from "../scripts/getAgentMats";
 import numArr from '../scripts/numArr';
 import plus from '../assets/plus.svg';
 import gear from '../assets/gear.svg';
+import chevrons from '../assets/chevrons.svg';
 
 export default function CharacterDisplay({ token, imgUrl, agent, index, updateCallback, deleteCallback, inventory }){
     
