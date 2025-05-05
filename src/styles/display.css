@@ -59,6 +59,10 @@
     padding-bottom: 5px;
 }
 
+.slider img {
+    width: 1em;
+}
+
 select {
     background-color: var(--belle-blue);
     color: var(--belle-black);
