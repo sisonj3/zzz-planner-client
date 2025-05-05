@@ -61,6 +61,7 @@
 
 .slider img {
     width: 1em;
+    height: auto;
 }
 
 select {
