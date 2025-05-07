@@ -220,7 +220,7 @@ export default function LoadoutDisplay({ imgUrl, loadout, index, updateCallback,
                     <button onClick={deleteLoadoutCallback} className='close'><img className='plus rotate' src={plus} /></button>
                 </div>
 
-                <div className="icon">
+                <div className="loadout_icons">
                     <img src={imgUrl} alt={loadout.name} title={loadout.name} />
 
                     {sets.map((set, index) => (

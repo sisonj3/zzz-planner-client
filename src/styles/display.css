@@ -139,6 +139,17 @@ option {
     display: flex;
 }
 
+.loadout_icons {
+    width: 60%;
+    display: flex;
+}
+
+.loadout_icons img {
+    width: 25%;
+    max-width: 150px;
+    height: auto;
+}
+
 .materials {
     display: grid;
 
