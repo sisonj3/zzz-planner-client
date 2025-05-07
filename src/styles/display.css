@@ -133,7 +133,8 @@ option {
 }
 
 .icon {
-    width: 60%;
+    width: 15%;
+    max-width: 150px;
 
     display: flex;
 }
