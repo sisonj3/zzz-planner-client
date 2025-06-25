@@ -57,6 +57,11 @@ export default async function getWengineMats(token, wengine) {
                     materials.push(new material("Reinforced Defense Component", upgradeMats[1]));
                     materials.push(new material("Specialized Defense Component", upgradeMats[2]));
                     break;
+                case "RUPTURE":
+                    materials.push(new material("Rupture Component", upgradeMats[0]));
+                    materials.push(new material("Reinforced Rupture Component", upgradeMats[1]));
+                    materials.push(new material("Specialized Rupture Component", upgradeMats[2]));
+                    break;
             }
 
         })
