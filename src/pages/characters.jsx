@@ -6,7 +6,7 @@ import Navigation from '../components/navigation';
 import Add from '../components/Add';
 import CharacterDisplay from '../components/characterDisplay';
 import placeBetween from "../scripts/splitArray";
-import { returnList } from "../unit_info/agents";
+import { agents } from "../unit_info/agents";
 
 const agentsPath = '../assets/Agents';
 
@@ -138,7 +138,7 @@ export default function Characters({ token, account, callback }) {
                 ))}
             </main>
 
-            <Add list={returnList} itemType={"Agent"} callback={addCharacter} />
+            <Add list={agents} itemType={"Agent"} callback={addCharacter} />
         </div>
     );
 };
