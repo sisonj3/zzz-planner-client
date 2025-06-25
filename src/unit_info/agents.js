@@ -46,7 +46,7 @@ const Expert = Object.freeze({
 // Characters
 
 // A Ranks
-export default agents = [
+const agents = [
     Object.freeze({
         name: 'Anby',
         rank: Rank.A,
@@ -373,3 +373,5 @@ export default agents = [
             expert: Expert.Miasmic_Elytron,
     }),
 ];
+
+export default agents;
