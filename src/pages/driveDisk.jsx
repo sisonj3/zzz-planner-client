@@ -6,6 +6,7 @@ import Navigation from '../components/navigation';
 import Add from '../components/Add';
 import placeBetween from '../scripts/splitArray';
 import getImg from "../scripts/getImg";
+import { agents } from "../unit_info/agents";
 
 const agentsPath = '../assets/Agents';
 
@@ -17,7 +18,6 @@ export default function DriveDisk({ token, account, callback }) {
 
     // States
     const [loadouts, setLoadouts] = useState((account == undefined) ? [] : JSON.parse(account.loadouts));
-    const [list, setList] = useState([]);
 
     // Navigate to login if no token
     useEffect(() => {
@@ -29,18 +29,18 @@ export default function DriveDisk({ token, account, callback }) {
             document.title = 'Drive Disks';
 
             // Fetch list of all characters
-            fetch(`${import.meta.env.VITE_API_URL}/character`, {
-                    mode: 'cors',
-                    method: 'GET',
-                    headers: {
-                        'authorization': `Bearer ${token}`,
-                    },
-                })
-                    .then(response => response.json())
-                    .then(response => {
-                        setList(response);
-                    })
-                    .catch(error => console.error(error));
+            // fetch(`${import.meta.env.VITE_API_URL}/character`, {
+            //         mode: 'cors',
+            //         method: 'GET',
+            //         headers: {
+            //             'authorization': `Bearer ${token}`,
+            //         },
+            //     })
+            //         .then(response => response.json())
+            //         .then(response => {
+            //             setList(response);
+            //         })
+            //         .catch(error => console.error(error));
         }
 
     }, [token]);
@@ -128,7 +128,7 @@ export default function DriveDisk({ token, account, callback }) {
                 ))}
             </main>
 
-            <Add list={list} itemType={"Agent"} callback={addLoadout} />
+            <Add list={agents} itemType={"Agent"} callback={addLoadout} />
         </div>
     );
 }

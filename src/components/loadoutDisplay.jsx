@@ -7,6 +7,7 @@ import getImg from "../scripts/getImg";
 const disksPath = '../assets/Sets';
 
 const setsList = [
+    "King of the Summit", "Yunkui Tales",
     "Phaethon's Melody", "Shadow Harmony",
     "Astral Voice", "Branch & Blade Song",
     "Fanged Metal", "Polar Metal",
