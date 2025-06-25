@@ -37,8 +37,11 @@ export default function Characters({ token, account, callback }) {
             for (let i = 0; i < agents.length; i++){
                 temp.push(agents[i].name);
             }
-
+            console.log("Temp[]");
+            console.log(temp);
             setList(temp);
+            console.log("List");
+            console.log(list);
             // fetch(`${import.meta.env.VITE_API_URL}/character`, {
             //         mode: 'cors',
             //         method: 'GET',
