@@ -374,12 +374,13 @@ export const agents = [
     }),
 ];
 
-export function returnList() {
-    let temp = [];
+export function findAgent(name) {
 
     for (let i = 0; i < agents.length; i++){
-        temp.push(agents[i].name);
+        if (agents[i].name == name) {
+            return agents[i];
+        }
     }
-
-    return temp;
+    
+    console.log("Agent not found");
 }
