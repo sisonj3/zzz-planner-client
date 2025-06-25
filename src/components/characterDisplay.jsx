@@ -58,7 +58,7 @@ export default function CharacterDisplay({ token, imgUrl, agent, index, updateCa
     // }, [mats]);
 
     function updateMats() {
-        let promise = getAgentMats(agent.name);
+        let promise = getAgentMats(agent);
 
         promise.then((list) => {
             setMats(list);
