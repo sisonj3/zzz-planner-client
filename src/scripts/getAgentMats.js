@@ -57,6 +57,11 @@ export default async function getAgentMats(token, agent) {
                     materials.push(new material("Advanced Defense Certification Seal", promoteMats[1]));
                     materials.push(new material("Defender Certification Seal", promoteMats[2]));
                     break;
+                case "RUPTURE":
+                    materials.push(new material("Basic Rupture Certification Seal", promoteMats[0]));
+                    materials.push(new material("Advanced Rupture Certification Seal", promoteMats[1]));
+                    materials.push(new material("Arbiter Certification Seal", promoteMats[2]));
+                    break;
             }
 
             // Skills + Cage Pass
