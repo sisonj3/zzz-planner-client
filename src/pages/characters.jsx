@@ -6,6 +6,7 @@ import Navigation from '../components/navigation';
 import Add from '../components/Add';
 import CharacterDisplay from '../components/characterDisplay';
 import placeBetween from "../scripts/splitArray";
+import agents from "../unit_info/agents";
 
 const agentsPath = '../assets/Agents';
 
@@ -31,18 +32,25 @@ export default function Characters({ token, account, callback }) {
             document.title = 'Agents';
 
             // Fetch list of all characters
-            fetch(`${import.meta.env.VITE_API_URL}/character`, {
-                    mode: 'cors',
-                    method: 'GET',
-                    headers: {
-                        'authorization': `Bearer ${token}`,
-                    },
-                })
-                    .then(response => response.json())
-                    .then(response => {
-                        setList(response);
-                    })
-                    .catch(error => console.error(error));
+            let temp = [];
+
+            for (let i = 0; i < agents.length; i++){
+                temp.push(agents[i].name);
+            }
+
+            setList(temp);
+            // fetch(`${import.meta.env.VITE_API_URL}/character`, {
+            //         mode: 'cors',
+            //         method: 'GET',
+            //         headers: {
+            //             'authorization': `Bearer ${token}`,
+            //         },
+            //     })
+            //         .then(response => response.json())
+            //         .then(response => {
+            //             setList(response);
+            //         })
+            //         .catch(error => console.error(error));
         }
     }, [token]);
 
