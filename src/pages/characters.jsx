@@ -6,7 +6,7 @@ import Navigation from '../components/navigation';
 import Add from '../components/Add';
 import CharacterDisplay from '../components/characterDisplay';
 import placeBetween from "../scripts/splitArray";
-import agents from "../unit_info/agents";
+import { returnList } from "../unit_info/agents";
 
 const agentsPath = '../assets/Agents';
 
@@ -19,7 +19,7 @@ export default function Characters({ token, account, callback }) {
 
     // States
     const [characters, setCharacters] = useState((account == undefined) ? [] : JSON.parse(account.units));
-    const [list, setList] = useState([]);
+    // const [list, setList] = useState([]);
 
     // Navigate to login if no token
     useEffect(() => {
@@ -32,16 +32,6 @@ export default function Characters({ token, account, callback }) {
             document.title = 'Agents';
 
             // Fetch list of all characters
-            let temp = [];
-
-            for (let i = 0; i < agents.length; i++){
-                temp.push(agents[i].name);
-            }
-            console.log("Temp[]");
-            console.log(temp);
-            setList(temp);
-            console.log("List");
-            console.log(list);
             // fetch(`${import.meta.env.VITE_API_URL}/character`, {
             //         mode: 'cors',
             //         method: 'GET',
@@ -148,7 +138,7 @@ export default function Characters({ token, account, callback }) {
                 ))}
             </main>
 
-            <Add list={list} itemType={"Agent"} callback={addCharacter} />
+            <Add list={returnList} itemType={"Agent"} callback={addCharacter} />
         </div>
     );
 };

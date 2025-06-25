@@ -46,7 +46,7 @@ const Expert = Object.freeze({
 // Characters
 
 // A Ranks
-const agents = [
+export const agents = [
     Object.freeze({
         name: 'Anby',
         rank: Rank.A,
@@ -374,4 +374,12 @@ const agents = [
     }),
 ];
 
-export default agents;
+export function returnList() {
+    let temp = [];
+
+    for (let i = 0; i < agents.length; i++){
+        temp.push(agents[i].name);
+    }
+
+    return temp;
+}
