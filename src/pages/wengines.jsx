@@ -33,19 +33,19 @@ export default function Wengines({ token, account, callback }) {
             document.title = 'W-Engines';
 
             // Fetch list of all W-engines
-            fetch(`${import.meta.env.VITE_API_URL}/wengine`, {
-                    mode: 'cors',
-                    method: 'GET',
-                    headers: {
-                        'authorization': `Bearer ${token}`,
-                    },
-                })
-                    .then(response => response.json())
-                    .then(response => {
-                        setList(response);
-                        //console.log(response);
-                    })
-                    .catch(error => console.error(error));
+            // fetch(`${import.meta.env.VITE_API_URL}/wengine`, {
+            //         mode: 'cors',
+            //         method: 'GET',
+            //         headers: {
+            //             'authorization': `Bearer ${token}`,
+            //         },
+            //     })
+            //         .then(response => response.json())
+            //         .then(response => {
+            //             setList(response);
+            //             //console.log(response);
+            //         })
+            //         .catch(error => console.error(error));
         }
     }, [token]);
 
