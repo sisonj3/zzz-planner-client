@@ -6,6 +6,7 @@ import placeBetween from '../scripts/splitArray';
 import Add from '../components/Add';
 import getImg from '../scripts/getImg';
 import wengine from '../classes/wengine';
+import { wenginesList } from '../unit_info/wengines';
 
 const wenginesPath = '../assets/W-Engines';
 
@@ -145,7 +146,7 @@ export default function Wengines({ token, account, callback }) {
 
             </main>
 
-            <Add list={list} itemType={"W-Engine"} callback={addWengine} />
+            <Add list={wenginesList} itemType={"W-Engine"} callback={addWengine} />
         </div>
     );
 };

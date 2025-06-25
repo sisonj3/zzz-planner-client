@@ -29,7 +29,7 @@ export default function WengineDisplay({ token, imgUrl, wengine, index, updateCa
     }, [wengine]);
     
     function updateMats() {
-        let promise = getWengineMats(token, wengine);
+        let promise = getWengineMats(wengine);
 
         promise.then((list) => {
             setMats(list);
