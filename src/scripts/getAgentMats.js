@@ -3,11 +3,11 @@ import { requiredCagePasses, requiredCoreMats, requiredDennies, requiredExp, req
 import { findAgent } from "../unit_info/agents";
 
 // Promise to get agent materials
-export default async function getAgentMats(name) {
+export default async function getAgentMats(agent) {
     // Array to hold materials
     let materials = [];
 
-    let agent = findAgent(name);
+    let agentData = findAgent(agent.name);
 
     // Dennies
     materials.push(new material("Dennies", requiredDennies(agent)));
@@ -22,7 +22,7 @@ export default async function getAgentMats(name) {
     // Ascension
     const promoteMats = requiredPromotionMats(agent);
 
-    switch (response.role) {
+    switch (agentData.role) {
         case "ATTACK":
             materials.push(new material("Basic Attack Certification Seal", promoteMats[0]));
             materials.push(new material("Advanced Attack Certification Seal", promoteMats[1]));
@@ -58,7 +58,7 @@ export default async function getAgentMats(name) {
     // Skills + Cage Pass
     const skillMats = requiredSkillMats(agent);
 
-    switch (response.attribute) {
+    switch (agentData.attribute) {
         case "PHYSICAL":
             materials.push(new material("Basic Physical Chip", skillMats[0]));
             materials.push(new material("Advanced Physical Chip", skillMats[1]));
@@ -92,10 +92,10 @@ export default async function getAgentMats(name) {
     const coreMats = requiredCoreMats(agent);
 
     // Expert
-    materials.push(new material(response.expert, coreMats[1]));
+    materials.push(new material(agentData.expert, coreMats[1]));
 
     // Weekly
-    materials.push(new material(response.weekly, coreMats[0]));
+    materials.push(new material(agentData.weekly, coreMats[0]));
 
     
     return materials;
