@@ -52,7 +52,7 @@ export default function Inventory({ token, account, callback }) {
         // Add unit mats
         for (let i = 0; i < units.length; i++) {
             if (units[i].isTracked) {
-                let promise = getAgentMats(token, units[i]);
+                let promise = getAgentMats(units[i]);
 
                 promises.push(
                     promise.then((materials) => {
@@ -74,7 +74,7 @@ export default function Inventory({ token, account, callback }) {
         // Add wengine mats
         for (let i = 0; i < wengines.length; i++) {
             if (wengines[i].isTracked) {
-                let promise = getWengineMats(token, wengines[i]);
+                let promise = getWengineMats(wengines[i]);
 
                 promises.push(
                     promise.then((materials) => {
