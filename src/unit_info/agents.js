@@ -41,6 +41,7 @@ const Expert = Object.freeze({
     Thunderous_Dragon: "Thunderous_Dragon",
     Mortal_Cleave: "Mortal_Cleave",
     Miasmic_Elytron: "Miasmic_Elytron",
+    Toxic_Edge: "Toxic_Edge",
 });
 
 // Characters
@@ -371,6 +372,24 @@ export const agents = [
             attribute: Attribute.FIRE,
             weekly: Weekly.Exuvia_of_Refinement,
             expert: Expert.Miasmic_Elytron,
+    }),
+
+    Object.freeze({
+        name: 'Yuzuha',
+            rank: Rank.S,
+            role: Role.SUPPORT,
+            attribute: Attribute.PHYSICAL,
+            weekly: Weekly.Sycophants_Refinement,
+            expert: Expert.Toxic_Edge,
+    }),
+
+    Object.freeze({
+        name: 'Alice',
+            rank: Rank.S,
+            role: Role.ANOMALY,
+            attribute: Attribute.PHYSICAL,
+            weekly: Weekly.Sycophants_Refinement,
+            expert: Expert.Toxic_Edge,
     }),
 ];
 

@@ -408,10 +408,28 @@ export const wenginesList = [
     }),
 
     Object.freeze({
+        name: 'Practiced Perfection',
+            rank: Rank.S,
+            role: Role.ANOMALY,
+    }),
+
+    Object.freeze({
         name: 'Weeping Cradle',
             rank: Rank.S,
             role: Role.SUPPORT,
     }), 
+
+    Object.freeze({
+        name: 'Elegant Vanity',
+            rank: Rank.S,
+            role: Role.SUPPORT,
+    }), 
+
+    Object.freeze({
+        name: 'Metanukimorphosis',
+            rank: Rank.S,
+            role: Role.SUPPORT,
+    }),
 
     Object.freeze({
         name: 'Tusks of Fury',
