@@ -26,7 +26,7 @@ const Weekly = Object.freeze({
     Living_Drive: "Living_Drive",
     Finale_Dance_Shoes: "Finale_Dance_Shoes",
     Scarlet_Engine: "Scarlet_Engine",
-    Sycophants_Refinement: "Sycophants_Refinement",
+    Sycophants_Refinement: "Sycophant's_Refinement",
     Exuvia_of_Refinement: "Exuvia_of_Refinement",
 });
 
