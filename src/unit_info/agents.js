@@ -321,6 +321,24 @@ export const agents = [
     }),
 
     Object.freeze({
+        name: 'Seed',
+            rank: Rank.S,
+            role: Role.ATTACK,
+            attribute: Attribute.ELECTRIC,
+            weekly: Weekly.Exuvia_of_Refinement,
+            expert: Expert.Mortal_Cleave,
+    }),
+
+    Object.freeze({
+        name: 'Orphie & Magus',
+            rank: Rank.S,
+            role: Role.ATTACK,
+            attribute: Attribute.FIRE,
+            weekly: Weekly.Scarlet_Engine,
+            expert: Expert.Miasmic_Elytron,
+    }),
+
+    Object.freeze({
         name: 'Astra Yao',
             rank: Rank.S,
             role: Role.SUPPORT,

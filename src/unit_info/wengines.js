@@ -336,6 +336,18 @@ export const wenginesList = [
     }),
 
     Object.freeze({
+        name: 'Cordis Germina',
+            rank: Rank.S,
+            role: Role.ATTACK,
+    }),
+
+    Object.freeze({
+        name: 'Bellicose Blaze',
+            rank: Rank.S,
+            role: Role.ATTACK,
+    }),
+
+    Object.freeze({
         name: 'Hellfire Gears',
             rank: Rank.S,
             role: Role.STUN,
